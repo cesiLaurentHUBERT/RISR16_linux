@@ -184,11 +184,13 @@ $ echo hello world
 
 Les étapes suivantes sont réalisées :
 
-1.Séparation de la ligne en mot (en utilisant les blancs comme séparateur)
+1.Séparation de la ligne en mot (en utilisant les blancs [**] comme séparateur)
 2. Expansion des mots
 3. Création d’un nouveau processus
 4. Exécution de la commande (qui est forcément le premier mot)
 5. Fourniture des mots comme argument à la commande
+
+[**] *en réalité, c'est la variable d'environnement IFS qui est utilisée*
 
 Ceci peut poser un problème, comme montrez ci-dessous :
 
@@ -226,7 +228,7 @@ whatis is your name ?
 
 Que se passe-t-il ?
 
-En fait, le `shell` essaye de faire un pattern matching sur les fichiers présents dans le répertoire où on se situe lorsqu’on exécute la commande. Le caractère `*` matche n’importe quelle séquence de 0 à n caractères dans le nom de fichier. Donc `*what*` match sera remplacé par `whatis`. Il en va de même pour le caractère `?`. `?` remplace 1 caractère.
+En fait, le `shell` essaye de faire un *pattern matching* sur les fichiers présents dans le répertoire où on se situe lorsqu’on exécute la commande. Le caractère `*` matche n’importe quelle séquence de 0 à n caractères dans le nom de fichier. Donc `*what*` match sera remplacé par `whatis`. Il en va de même pour le caractère `?`. `?` remplace 1 caractère.
 
 Si vous voulez empêcher l’expansion, il faut mettre des `"` autour de l’expression, comme dans l’exemple suivant :
 
@@ -242,12 +244,14 @@ C’est la raison pour laquelle la commande :
 $ rm -rf *
 ```
 
-supprime l’ensemble des fichiers du répertoire courant. En fait, il existe d’autres expansions:
+supprime l’ensemble des fichiers du répertoire courant. En fait, il existe d’autres expansions [*]:
 * `*` : 0 à n caractères
 * `?` : 1 caractère
 * `[abc]` : le caractère `a`, `b` ou `c`
 * `[a-z]` : un caractère parmi les lettres comprises entre `a` et `z`
 * `$*` : tout ce qui commence par $ est du domaine de l’expansion de paramètres
+
+[*] *On utilise aussi souvent le terme *wildcard* à la place de *expansion.
 
 Beaucoup d’expansion sont possibles, mais la plus courante est l’expansion de variables comme dans l’exemple :
 
@@ -271,16 +275,16 @@ Vous devez répondre à ces questions, en vous déplaçant le moins possible. C�
 1. Vérifiez l’effacement.
 1. Créez un répertoire appelé : `repertoireAvecUnNomSuperLongPourNePasAvoirEnvieDeLeTaperPlusDUneFois`.
 1. Vérifiez sa présence.
-1. Déplacez vous dans ce répertoire [voir ici][9].
-1. Copiez le fichier nouveau dans ce répertoire.
-1. Utilisez une expression avec un wildcard pour lister les fichiers dans le répertoire courant.
-1. Revenez dans votre home directory (3 solutions)
+1. Déplacez vous dans ce répertoire [*].
+1. Copiez le fichier `nouveau` dans ce répertoire.
+1. Utilisez une expression avec un *wildcard* pour lister les fichiers dans le répertoire courant.
+1. Revenez dans votre *home directory* (3 solutions)
 1. Effacez le répertoire que vous avez créé précédemment.
 1. Vérifiez la suppression.
 
 
 
-[9] Voir ici ici
+[*] *vous pouvez utiliser la touche `TAB` après avoir taper les premières lettres de son nom: celui-ci sera complété automatiquement par le `shell`*
 
 ## Alias et fichier de configuration
 Dans un terminal, tapez le code :
