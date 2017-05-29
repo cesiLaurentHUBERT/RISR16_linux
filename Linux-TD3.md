@@ -264,14 +264,14 @@ Vous devez répondre à ces questions, en vous déplaçant le moins possible. C�
 *Exercice 1* (Manipulations basiques).
 
 1. Affichez les fichiers de votre répertoire utilisateur.
-1. Créez un fichier appelé ancien, sans utiliser un éditeur de texte.
-1. Copiez le fichier ancien vers un fichier appelé nouveau.
+1. Créez un fichier appelé `ancien`, sans utiliser un éditeur de texte.
+1. Copiez le fichier `ancien` vers un fichier appelé `nouveau`.
 1. Vérifiez la présence de ces deux fichiers.
-1. Effacez le fichier ancien.
+1. Effacez le fichier `ancien`.
 1. Vérifiez l’effacement.
 1. Créez un répertoire appelé : `repertoireAvecUnNomSuperLongPourNePasAvoirEnvieDeLeTaperPlusDUneFois`.
 1. Vérifiez sa présence.
-1. Déplacez vous dans ce répertoire 9.
+1. Déplacez vous dans ce répertoire [voir ici][9].
 1. Copiez le fichier nouveau dans ce répertoire.
 1. Utilisez une expression avec un wildcard pour lister les fichiers dans le répertoire courant.
 1. Revenez dans votre home directory (3 solutions)
@@ -279,6 +279,8 @@ Vous devez répondre à ces questions, en vous déplaçant le moins possible. C�
 1. Vérifiez la suppression.
 
 
+
+[9] Voir ici ici
 
 ## Alias et fichier de configuration
 Dans un terminal, tapez le code :
