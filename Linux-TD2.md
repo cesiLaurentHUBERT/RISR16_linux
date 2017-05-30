@@ -1,4 +1,4 @@
-# UNIX/Linux TD3 : Processus
+# UNIX/Linux TD2 : Processus et fichiers
 
 ## Introduction
 UNIX/Linux permettent de gérer des processus de manière parallèle: pendant qu'un logiciel est exécuté, un autre peut également l'être. Ceci donne l'illusion que les deux programmes tournent en parallèle.
