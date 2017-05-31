@@ -40,7 +40,7 @@ successives.
 
 **Exemple** : ` head -3 notes.txt | tail -2` permet d’extraire les 2e et 3e lignes du fichier notes.txt
 
-A partir du fichier `notes.txt`, écrivez les traitements suivants, en utilisant les commandes `tr`, `cut` et `sort` :
+A partir du fichier `notes.txt`, écrivez les traitements suivants, en utilisant les commandes `cut` et `sort` :
 
 14.  Afficher la liste des étudiants de la licence informatique triée par ordre alphabétique des nom et prénom.
 
