@@ -2,7 +2,7 @@
 
 ## Recherche et classement de données
 
-Récupérer les fichiers suivants depuis [Linux-TD2.tar.gz](data/Linux-TD2.tar.gz) : `2050.txt`, `nblng10.txt`, `tp2.txt` et `notes.txt`
+Récupérer les fichiers suivants depuis [donnees-linux.tar.gz](data/donnees-linux.tar.gz) : `2050.txt`, `nblng10.txt`, `tp2.txt` et `notes.txt`
 
 1.  Lister les lignes du fichier `2050.txt` contenant le chiffre 1
 
@@ -14,7 +14,7 @@ Récupérer les fichiers suivants depuis [Linux-TD2.tar.gz](data/Linux-TD2.tar.g
 
 5.  Renommer le fichier `tp2.txt` en `tp2resultat.txt`
 
-6.  Revenir à la racine de **votre répertoire utilisateur** (HOME) et lister tous les fichiers de votre espace de travail avec leurs attributs complets
+6.  Revenir à la racine de **votre répertoire utilisateur** (`$HOME`) et lister tous les fichiers de votre espace de travail avec leurs attributs complets
 
 7.  Rechercher le fichier nommé `tp2resultat.txt`
 
