@@ -24,7 +24,7 @@ Récupérer les fichiers suivants depuis [donnees-linux.tar.gz](data/donnees-lin
 
 ## Lignes vides et lignes blanches
 
-10. Dans le fichier `nblng10.txt`, sur combien de lignes le mot Nibelung apparaît-il ?
+10. Dans le fichier `nblng10.txt`, sur combien de lignes le mot `Nibelung` apparaît-il ?
 
 11. Eliminer les lignes vides et mettre le résultat dans `nblng10bis.txt`
 
@@ -40,8 +40,10 @@ successives.
 
 **Exemple** : ` head -3 notes.txt | tail -2` permet d’extraire les 2e et 3e lignes du fichier notes.txt
 
-A partir du fichier `notes.txt`, écrivez les traitements suivants, en utilisant les commandes `tr`, `cut` et `sort` :
+A partir du fichier `notes.txt`, écrivez les traitements suivants, en utilisant les commandes `tr` et `sort` :
 
 14.  Afficher la liste des étudiants de la licence informatique triée par ordre alphabétique des nom et prénom.
 
 15.  Afficher les résultats de `LIN2` par ordre croissant des notes. En cas d’égalité, les étudiants sont rangés par ordre alphabétique des nom et prénom.
+
+16. Prendre le contenu du fichier `nblng10.txt` et le mettre en majuscules dans le fichier `nblng10maj.txt`
