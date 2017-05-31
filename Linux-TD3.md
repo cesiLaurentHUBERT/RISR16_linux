@@ -40,10 +40,12 @@ successives.
 
 **Exemple** : ` head -3 notes.txt | tail -2` permet d’extraire les 2e et 3e lignes du fichier notes.txt
 
-A partir du fichier `notes.txt`, écrivez les traitements suivants, en utilisant les commandes `tr` et `sort` :
+A partir du fichier `notes.txt`, écrivez les traitements suivants, en utilisant les commandes `cut` et `sort` :
 
 14.  Afficher la liste des étudiants de la licence informatique triée par ordre alphabétique des nom et prénom.
 
 15.  Afficher les résultats de `LIN2` par ordre croissant des notes. En cas d’égalité, les étudiants sont rangés par ordre alphabétique des nom et prénom.
+
+Ici, vous pouvez utiliser la commande `tr` :
 
 16. Prendre le contenu du fichier `nblng10.txt` et le mettre en majuscules dans le fichier `nblng10maj.txt`
