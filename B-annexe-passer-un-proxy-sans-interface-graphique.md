@@ -13,6 +13,13 @@ Il faut lancer `ssh` avec l'option X11-forwarding (`-X` ou `-Y`).
 
 ## Installation d'un navigateur
 
+On a le choix entre quatre navigateurs:
+* iceweasel (installable via `apt-get`) :  c'est l'équivalent de Firefox
+* chromium (idem)
+* midori
+* xombrero
+
+
 ### Midori
 
 Télécharger le paquet depuis l'adresse suivante: http://midori-browser.org/download/debian/
