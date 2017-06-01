@@ -114,7 +114,7 @@ Ce tutoriel indique comment configurer `Pageant` (l'agent Putty de gestion des p
 Sur le client, créer le fichier `.bash_profile` :
 
 ```bash
-touch .bash_profile`
+touch .bash_profile
 ```
 
 Éditer le fichier `.bash_profile`. Ajoutez les lignes suivantes à la fin du fichier :
