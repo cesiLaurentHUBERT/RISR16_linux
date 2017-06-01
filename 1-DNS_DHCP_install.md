@@ -3,6 +3,8 @@
 ## Introduction
 Ceci est une procédure permettant d'installer un serveur DHCP et DNS sur une machine Debian.
 
+Son nom sera: `netgateway`.
+
 Cette machine comportera :
 
 * 256 Mo de RAM
@@ -26,7 +28,7 @@ Ceci est à adapter aux besoins (c'est-à-dire au plan d'adressage que vous auri
 
 ### Avertissement
 
-Toute configuration ne respectant pas ce qui précède risque de **provoquer des dysfonctionnements** sur le réseau local. Il est de votre responsabilité
+Toute configuration ne respectant pas ce qui précède risque de **provoquer des dysfonctionnements** sur le réseau local. Il est de votre responsabilité de configurer correctement vos cartes `vmnet`.
 
 
 ### Configuration spécifique pour une machine avec deux cartes réseau
@@ -363,7 +365,7 @@ Cependant, cette règle sera perdue au prochain redémarrage de la machine.
 Pour éviter cela, on va installer un paquet qui permet de sauvegarder la configuration iptables et de la restaurer automatiquement au démarrage.
 
 ```bash
-sudo apt-get install -y iptables-persistent
+sudo apt-get install iptables-persistent
 ```
 
 Au moment de l'installation, l'installeur nous demande si nous souhaitons sauvegarder les règles. Ce qui est ici le cas.
