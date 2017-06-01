@@ -24,13 +24,16 @@ Quand vous voyez <Ctrl-C>, cela signifie que vous devez taper la touche Ctrl et 
 
 
 ## Gestion des processus
-Quand vous exécutez :
+
+### Exécution
+Quand vous lancez :
 
 ```bash
 sleep 5
 ```
 
-Vous exécutez cette commande en *foreground*. Ce qui signifie que le shell attend la fin de la com- mande avant de vous "rendre la main". Maintenant exécutez
+### Terminaison
+Vous exécutez cette commande en *foreground*. Ce qui signifie que le shell attend la fin de la commande avant de vous "rendre la main". Maintenant exécutez :
 
 ```bash
 $ sleep 6000
@@ -38,14 +41,13 @@ $ sleep 6000
 $
 ```
 
-
-
 Quand vous pressez la séquence de touche, vous envoyez un signal de terminaison au processus actuel (celui qui s’exécute en avant plan), ce qui fait que vous n’avez pas à attendre 6000 secondes avant de pouvoir exécuter une nouvelle commande.
+
+### Exécution en arrière-plan
 
 Plutôt que de lancer une commande en *foreground* (avant-plan), on peut la lancer en *background* (arrière-plan).
 
 Ceci se fait simplement en rajoutant un `&` après la commande.
-
 
 ```bash
 $ sleep 6000 &
@@ -63,17 +65,52 @@ Le shell garde une trace de tous les jobs en cours d’exécution. La commande j
 [3] + running sleep 6000
 ```
 
-Par ailleurs, on peut aussi voir ce processus en faisant :
+### Affichage des processus
+
+L'affichage des informations sur les processus se fait par la commande `ps`:
 
 ```bash
-$ ps auwx | grep sleep
-fd 27181 0.0 0.0 7308 704 pts/4 SN 15:26 0:00 sleep 6000
-fd 27430 0.0 0.0 14272 964 pts/4 S+ 15:33 0:00 grep sleep
+$ ps
+   PID TTY          TIME CMD
+  3342 pts/2    00:00:00 bash
+  3361 pts/2    00:00:00 sleep
+  3362 pts/2    00:00:00 ps
+$
+```
+
+On peut ajouter des options à la commande `ps` et la filtrer avec la commande `grep`:
+
+```bash
+$ ps -elf | grep sleep
+0 S laurent    3089   2525  0  80   0 -  1803 restar 10:15 pts/0    00:00:00 sleep 6000
+0 S laurent    3361   3342  0  80   0 -  1803 restar 11:20 pts/2    00:00:00 sleep 6000
+0 S laurent    3365   3342  0  80   0 -  2945 pipe_w 11:25 pts/2    00:00:00 grep --color=auto sleep
+$
+```
+
+Et même rajouter l'entête des colonnes:
+
+```bash
+$ ps -elf | head -1 ; ps -elf | grep sleep
+F S UID         PID   PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+0 S laurent    3089   2525  0  80   0 -  1803 restar 10:15 pts/0    00:00:00 sleep 6000
+0 S laurent    3361   3342  0  80   0 -  1803 restar 11:20 pts/2    00:00:00 sleep 6000
+0 S laurent    3365   3342  0  80   0 -  2945 pipe_w 11:25 pts/2    00:00:00 grep --color=auto sleep
+$
+```
+
+
+
+On peut aussi voir ce processus en faisant :
+
+```bash
+$ ps aux | grep sleep
+laurent 27181 0.0 0.0 7308  704 pts/4 SN 15:26 0:00 sleep 6000
+laurent 27430 0.0 0.0 14272 964 pts/4 S+ 15:33 0:00 grep sleep
 $
 ```
 
 Comment faire pour terminer ce job? Il y a plusieurs façons :
-
 
 ```bash
 $ kill 27181   # En utilisant son pid
