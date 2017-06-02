@@ -72,11 +72,15 @@ Voir aussi [cette page](http://lea-linux.org/documentations/Gestion_des_ACL).
 ## Un peu de tâches asynchrones
 
 21. Lancez la commande `crontab -e` et ajouter la ligne suivante:
+
 ```
 */2 * * * * /bin/date >> /home/laurent/dates.txt
 ```
 22. Faites de même avec la ligne suivante:
+```
 * * * * * tail -r /home/laurent/dates.txt > /home/laurent/derniere-date.txt
+```
+
 23. Expliquez ce que signifient chacune des étoiles.
 24. Comment faire pour exécuter cette dernière commande tous les lundis ?
 25. Configurez une sauvegarde avec la commande `tar` : les fichiers `/etc/group`, `/etc/passwd` et `/etc/shadow` tous les jours à 3h du matin. Avant de définir l'heure définitive, testez avec une heure vous permettant de constater les effets de la commande. Les fichiers seront stockés dans un sous-répertoire de `/root/`
