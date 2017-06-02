@@ -78,10 +78,16 @@ Voir aussi [cette page](http://lea-linux.org/documentations/Gestion_des_ACL).
 ```
 22. Faites de même avec la ligne suivante:
 ```
-* * * * * tail -r /home/laurent/dates.txt > /home/laurent/derniere-date.txt
+* * * * * tail -1 /home/laurent/dates.txt > /home/laurent/derniere-date.txt
 ```
 
 23. Expliquez ce que signifient chacune des étoiles.
-24. Comment faire pour exécuter cette dernière commande tous les lundis ?
-25. Configurez une sauvegarde avec la commande `tar` : les fichiers `/etc/group`, `/etc/passwd` et `/etc/shadow` tous les jours à 3h du matin. Avant de définir l'heure définitive, testez avec une heure vous permettant de constater les effets de la commande. Les fichiers seront stockés dans un sous-répertoire de `/root/`
-26. Utilisez la commande `nohup` associée à `wget` pour télécharger le fichier `https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.11.3.tar.xz`. À quoi sert cette commande `nohup` ?
+1. Comment faire pour exécuter cette dernière commande tous les lundis ?
+1. Ajouter la commande suivante dans le crontab de manière à ce qu'elle s'exécute à une heure prochaine :
+
+```
+for i in 1 2 3 4 5 ; do echo $i ; sleep 5 ; done >> /home/<USER>/fichier.log 2>&1
+```
+
+1. Configurez une sauvegarde avec la commande `tar` : les fichiers `/etc/group`, `/etc/passwd` et `/etc/shadow` tous les jours à 3h du matin. Avant de définir l'heure définitive, testez avec une heure vous permettant de constater les effets de la commande. Les fichiers seront stockés dans un sous-répertoire de `/root/`
+1. Utilisez la commande `nohup` associée à `wget` pour télécharger le fichier `https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.11.3.tar.xz`. À quoi sert cette commande `nohup` ?
