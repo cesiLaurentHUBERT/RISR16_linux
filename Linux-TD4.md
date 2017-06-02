@@ -23,8 +23,8 @@ Après chacune des opérations suivantes, observez le contenu des fichiers `/etc
 8. Connectez-vous en tant que `ianmurdock` avec la commande `su` et créez un fichier nommé `je-suis-su.txt`. Déconnectez-vous
 9. Connectez-vous en tant que `ianmurdock` avec la commande `su -` et créez un fichier nommé `je-suis-su-tiret.txt`. Déconnectez-vous
 10. Qu'observez-vous ? Où sont les deux fichiers créés ?
-11. Utilisez la commande suivante: `sudo -u ianmurdock echo Bonjour >> fichier-ian.txt`. À qui appartient ce fichier ?
-12. Utilisez la commande suivante: `sudo -u ianmurdock cp fichier-ian.txt copie-ian.txt`. À qui appartient ce nouveau fichier ?
+11. Utilisez la commande suivante: `sudo -u ianmurdock echo Bonjour >> fichier-ian.txt`. À qui appartient ce fichier ? Réessayer en mettant la cible dans `/tmp` (`/tmp/fichier-ian.txt`)
+12. Utilisez la commande suivante: `sudo -u ianmurdock cp fichier-ian.txt copie-ian.txt`. À qui appartient ce nouveau fichier ? Essayer de faire ces opérations dans le répertoire `/home/ianmurdock`.
 
 ## Remplacer un mot de passe
 
