@@ -45,6 +45,8 @@ openssl passwd -1 -salt clesalage  nouveaumotdepasse
 16. À quoi correspond la clef de salage ?
 17. Utilisez ce résultat pour remplacer le mot de passe de `linustorvalds` dans le fichier `/etc/shadow`. Vérifiez que vous pouvez vous connecter.
 
+Voir aussi [cette page](https://gist.github.com/JensRantil/ac691a4854a4f6cb4bd9)
+
 ## ACLs
 
 Créer l'arborescence suivante:
@@ -64,6 +66,8 @@ Dans chaque dossier `sources`, créer un fichier `init.c`.
 
 20. Utilisez la commande `getfacl` pour vérifier les droits affectés au fichier `informatique/mac/sources/init.c`
 
+
+Voir aussi [cette page](http://lea-linux.org/documentations/Gestion_des_ACL).
 
 ## Un peu de tâches asynchrones
 
